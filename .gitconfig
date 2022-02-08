@@ -1,0 +1,7 @@
+[user]
+	name = MATSUDA Takashi
+	email = tmatz.dev@gmail.com
+[merge]
+	tool = meld
+[pull]
+	rebase = false
