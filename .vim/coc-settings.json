@@ -8,6 +8,7 @@
     "scss",
     "markdown",
     "json",
-    "yaml"
+    "yaml",
+    "go"
   ]
 }
