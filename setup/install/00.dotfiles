@@ -19,6 +19,7 @@ cat <<EOD >>$EXCLUDE
 .config/QtProject.conf
 .config/cros-garcon.conf
 .config/kdiff3rc
+.config/systemd/user/default.target.wants
 .config/weston.ini
 dotfiles
 downloads
