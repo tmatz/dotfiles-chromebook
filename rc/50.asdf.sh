@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ASDF_SH=~/.asdf/asdf.sh
 
 if [ ! -d ~/.asdf ]; then

@@ -1,9 +1,9 @@
 #!/bin/bash
 
-BASE=$(cd "$(dirname "${BASH_SOURCE[0]}")"; pwd -P)
+DIR=~/dotfiles/bash_completions
 
-for i in "$BASE/bash_completion.d"/*; do
-  if [ -f "$i" -a -r "$i" ]; then
-    . "$i"
+for file in $DIR/*; do
+  if [ -f $file -a -r $file ]; then
+    . $file
   fi
 done

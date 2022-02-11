@@ -1,11 +1,11 @@
 # ~/.bash_aliases
 
-RC_D=~/setup/rc.d
+DIR=~/dotfiles/rc
 
-if [ -d $RC_D -a -x $RC_D ]; then
-  for f in "$RC_D"/* ; do
-    if [ -f "$f" -a -r "$f" ]; then
-      . "$f"
+if [ -d $DIR -a -x $DIR ]; then
+  for file in $DIR/* ; do
+    if [ -f $file -a -r $file ]; then
+      . $file
     fi
   done
 fi
