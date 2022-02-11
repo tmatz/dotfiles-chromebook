@@ -1,0 +1,40 @@
+EXCLUDE=~/dotfiles/info/exclude
+
+sed -i '/^## ~\/setup\/install\/00.dotfiles/,$d' $EXCLUDE
+
+cat <<EOD >>$EXCLUDE
+## ~/setup/install/00.dotfiles
+.asdf
+.bash_history
+.bash_logout
+.bashrc
+.cache
+.config/coc
+.config/configstore
+.config/dconf
+.config/dlv
+.config/gtk-2.0
+.config/lazygit/state.yml
+.config/pulse
+.config/QtProject.conf
+.config/cros-garcon.conf
+.config/kdiff3rc
+.config/weston.ini
+dotfiles
+downloads
+go
+.lesshst
+.local
+.node_repl_history
+.npm
+.profile
+projects
+.sommelierrc
+.ssh/known_hosts
+.ssh/*_ed25519
+.tool-versions
+.viminfo
+.vim/plugged
+.wget-hsts
+.Xauthority
+EOD
