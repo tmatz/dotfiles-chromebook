@@ -1,0 +1,46 @@
+customCommands:
+  - description: "push up to"
+    context: "commits"
+    key: "<c-p>"
+    prompts:
+      - title: "Are you sure you want to push up to this commit?"
+        type: "menu"
+        options:
+          - value: "yes"
+    command: >
+      {{if (eq (index .PromptResponses 0) "yes")}}
+        {{if .CheckedOutBranch.UpstreamBranch}}
+          git push -f {{.CheckedOutBranch.UpstreamRemote}} {{.SelectedLocalCommit.Sha}}:{{.CheckedOutBranch.UpstreamBranch}};
+        {{else}}
+          echo "Not tracking remote yet."
+        {{end}}
+      {{end}}
+    subprocess: true
+  - description: "stop tracking remote"
+    context: "localBranches"
+    key: "<c-p>"
+    prompts:
+      - title: "Are you sure you want to stop tracking remote?"
+        type: "menu"
+        options:
+          - value: "yes"
+          - value: "yes, and also delete fetched remote branch"
+          - value: "yes, and also delete feched and real remote branch"
+    command: >
+      {{if .SelectedLocalBranch.UpstreamBranch}}
+        {{if (eq (index .PromptResponses 0) "yes")}}
+          git config --unset branch.{{.SelectedLocalBranch.Name}}.remote &&
+          git config --unset branch.{{.SelectedLocalBranch.Name}}.merge
+        {{else if (eq (index .PromptResponses 0) "yes, and also delete fetched remote branch")}}
+          git branch -d -r {{.SelectedLocalBranch.UpstreamRemote}}/{{.SelectedLocalBranch.UpstreamBranch}} &&
+          git config --unset branch.{{.SelectedLocalBranch.Name}}.remote &&
+          git config --unset branch.{{.SelectedLocalBranch.Name}}.merge
+        {{else if (eq (index .PromptResponses 0) "yes, and also delete feched and real remote branch")}}
+          git push {{.SelectedLocalBranch.UpstreamRemote}} --delete {{.SelectedLocalBranch.UpstreamBranch}} &&
+          git config --unset branch.{{.SelectedLocalBranch.Name}}.remote &&
+          git config --unset branch.{{.SelectedLocalBranch.Name}}.merge
+        {{end}}
+      {{else}}
+        echo "Not tracking remote yet."
+      {{end}}
+    subprocess: true
