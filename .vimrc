@@ -1,11 +1,9 @@
-"let g:dracula_italic = 0
-
 call plug#begin('~/.vim/plugged')
 
 Plug 'cohama/lexima.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vim-airline/vim-airline'
-Plug 'dracula/vim',{'as':'dracula'}
+Plug 'rakr/vim-one'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
 
@@ -19,4 +17,7 @@ set shiftwidth=2
 set expandtab
 set termguicolors
 set mouse=a
-colorscheme dracula
+colorscheme one
+set background=dark
+let g:one_allow_italics=1
+let g:airline_theme="one"
