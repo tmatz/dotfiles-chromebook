@@ -16,5 +16,8 @@
   link .vim/coc-settings.json
   link .vim/user/coc.nvim.vim
   link .vim/user/nerdtree.vim
+  link .vim/user/uim.vim
   link .vimrc
+  link bin/imectrl
+  link .uim
 )

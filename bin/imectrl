@@ -1,0 +1,10 @@
+#!/bin/sh
+
+UIM_SET_FILE=$UIM_FEP_SETMODE
+[ ! -w "$UIM_SET_FILE" ] && exit 1
+
+if [ $1 -eq 1 ]; then
+    echo 1 > $UIM_SET_FILE
+else
+    echo 0 > $UIM_SET_FILE
+fi

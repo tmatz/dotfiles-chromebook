@@ -1,7 +1,6 @@
 sudo apt install uim-fep uim-mozc
-cat << EOD > ~/.uim
-(define default-im-name 'mozc)
-(define-key generic-on-key? '("<Control> "))
-(define-key generic-off-key? '("<Control> "))
+PROFILE=~/.profile
+test -w ${PROFILE} && grep -q '^uim-fep' ${PROFILE} || cat << EOD >> ${PROFILE}
+uim-fep -sb
 EOD
-uim-fep
+uim-fep -sb
