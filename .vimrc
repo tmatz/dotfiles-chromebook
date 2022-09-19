@@ -2,7 +2,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'cohama/lexima.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline'
 Plug 'rakr/vim-one'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
