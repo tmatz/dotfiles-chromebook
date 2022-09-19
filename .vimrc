@@ -7,6 +7,7 @@ Plug 'rakr/vim-one'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'ziglang/zig.vim'
 
 call plug#end()
 
