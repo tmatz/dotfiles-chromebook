@@ -23,3 +23,4 @@ colorscheme one
 set background=dark
 let g:one_allow_italics=1
 let g:airline_theme="one"
+set splitright
