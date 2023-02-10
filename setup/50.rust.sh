@@ -3,5 +3,5 @@
 asdf plugin add rust
 asdf install rust latest
 asdf global rust latest
-rustup component add rls rust-analysis rust-src
+rustup component add rust-analyzer rust-analysis rust-src
 cargo install cargo-watch
