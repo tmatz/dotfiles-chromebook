@@ -2,6 +2,6 @@
 
 for file in setup/*.sh; do
   if [ -x $file ]; then
-    echo $file
+    . $file
   fi
 done
