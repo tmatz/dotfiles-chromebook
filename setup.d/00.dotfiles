@@ -6,6 +6,7 @@
   }
 
   link .bash_aliases
+  link .config/coc/extensions/package.json
   link .config/lazygit/config.yml
   link .config/systemd/user/ssh-agent.service
   link .config/bash_completion
