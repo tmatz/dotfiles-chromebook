@@ -1,2 +1,8 @@
 #!/bin/bash
+
 export SSH_AUTH_SOCK=/run/user/1000/ssh-agent.socket
+
+if [ ! -n "$(ssh-add -l)" ]; then
+  ssh-add $HOME/.ssh/*_nopasswd_*
+fi
+
