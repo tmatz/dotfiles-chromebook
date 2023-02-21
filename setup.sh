@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for file in setup/*.sh; do
+for file in $HOME/dotfiles/setup/*; do
   if [ -x $file ]; then
     . $file
   fi
