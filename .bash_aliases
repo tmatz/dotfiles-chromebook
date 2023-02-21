@@ -1,3 +1,3 @@
 # ~/.bash_aliases
 
-. $HOME/dotfiles/rc.sh
+. $HOME/dotfiles/rc

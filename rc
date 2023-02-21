@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for file in $HOME/dotfiles/rc/*; do
+for file in $HOME/dotfiles/rc.d/*; do
   if [ -x $file ]; then
     . $file
   fi

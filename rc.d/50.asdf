@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ ! -d $HOME/.asdf ]; then
+  exit
+fi
+
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
