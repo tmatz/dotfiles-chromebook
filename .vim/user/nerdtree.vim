@@ -6,4 +6,5 @@ nnoremap <F3> :NERDTreeToggle<CR>
 nnoremap <F4> :NERDTreeFind<CR>
 
 let NERDTreeQuitOnOpen=1
-
+"let NERDTreeShowHidden=1
+let NERDTreeIgnore=['\.git$']
