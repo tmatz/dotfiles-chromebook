@@ -15,7 +15,9 @@
   link .ssh/config
   link .vim/autoload/plug.vim
   link .vim/coc-settings.json
+  link .vim/user/clipboard.vim
   link .vim/user/coc.nvim.vim
+  link .vim/user/fzf.vim
   link .vim/user/nerdtree.vim
   link .vim/user/uim.vim
   link .vimrc
