@@ -9,7 +9,8 @@
     "coc-yaml": ">=1.9.0",
     "coc-java": ">=1.14.1",
     "coc-zig": ">=0.6.1",
-    "coc-prettier": ">=9.3.1"
+    "coc-prettier": ">=9.3.1",
+    "coc-rome": ">=1.1.0"
   },
-  "lastUpdate": 1676991823407
+  "lastUpdate": 1678287874660
 }
