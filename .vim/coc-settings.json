@@ -1,5 +1,12 @@
 {
   "suggest.noselect": true,
   "coc.preferences.formatOnSave": true,
-  "zig.path": "~/projects/zls/zig-out/bin/zls"
+  "zig.path": "~/projects/zls/zig-out/bin/zls",
+  "languageserver": {
+    "metals": {
+      "command": "metals",
+      "rootPatterns": ["build.sbt"],
+      "filetypes": ["scala", "sbt"]
+    }
+  }
 }

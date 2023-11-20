@@ -1,4 +1,0 @@
-#!/bin/bash
-asdf plugin add scala-cli
-asdf install scala-cli latest
-asdf global scala-cli latest
