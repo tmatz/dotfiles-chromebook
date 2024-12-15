@@ -6,7 +6,7 @@
 ssh-keygen -t ed25519
 ```
 
-2. register ~/.ssh/id_ed25519.pub key to github.
+2. register `~/.ssh/id_ed25519.pub` key to github.
 
 3. then, clone this repository:
 
