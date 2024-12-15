@@ -2,6 +2,7 @@
   "suggest.noselect": true,
   "coc.preferences.formatOnSave": true,
   "zig.path": "~/projects/zls/zig-out/bin/zls",
+  "prettier.requireConfig": true,
   "languageserver": {
     "metals": {
       "command": "metals",
