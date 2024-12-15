@@ -26,3 +26,5 @@ set background=dark
 let g:one_allow_italics=1
 let g:airline_theme="one"
 set splitright
+
+command! -nargs=0 Lazygit :terminal ++close lazygit
