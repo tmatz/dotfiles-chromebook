@@ -11,7 +11,8 @@
     "coc-zig": ">=0.6.1",
     "coc-prettier": ">=9.3.2",
     "coc-biome": ">=1.8.0",
-    "coc-tailwindcss": ">=0.7.0"
+    "coc-tailwindcss": ">=0.7.0",
+    "coc-pairs": ">=1.4.2"
   },
   "lastUpdate": 1734241374382
 }
