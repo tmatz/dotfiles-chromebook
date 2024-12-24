@@ -19,7 +19,7 @@ _npm_run_completion() {
       fi
       dir=$(cd $(dirname $(readlink $dir || echo $dir)) || exit;pwd)
     done
-    scripts=$(cat "${dir}/package.json" | jq '.scripts | keys[]' | sed -e 's/"//g')
+    scripts=$(jq --raw-output '.scripts | keys[] | select(test("^[^/]"))' < "${dir}/package.json")
     COMPREPLY=( $(compgen -W "${scripts}" "${cur}") )
     __ltrim_colon_completions "${cur}"
   fi
